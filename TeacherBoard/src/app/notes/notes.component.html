@@ -1,0 +1,6 @@
+  <div class="row">
+    <ul>
+      <h1>Notes</h1>
+      <li *ngFor="let note of (notes | async)">{{note.items}}</li> <!--- notes is an Observable after getting from ApiService, that's why we can use the async-->
+    </ul>                                                          <!-- the async pipe subscribes to the Observable-->
+</div>
